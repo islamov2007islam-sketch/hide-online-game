@@ -1,0 +1,72 @@
+.hud {
+    /* Styling for the overall HUD container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.health-bar {
+    /* Health bar styling */
+    width: 200px;
+    height: 20px;
+    background-color: red;
+    border-radius: 5px;
+    position: relative;
+}
+
+.health-fill {
+    /* Dynamic fill of health bar */
+    height: 100%;
+    border-radius: 5px;
+    background-color: green;
+    transition: width 0.3s;
+}
+
+.timer {
+    /* Timer display styling */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: yellow;
+}
+
+.minimap {
+    /* Minimap container styling */
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.score-board {
+    /* Score board layout styling */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.team-color-1 {
+    /* Team 1 color */
+    background-color: blue;
+}
+
+.team-color-2 {
+    /* Team 2 color */
+    background-color: red;
+}
+
+.real-time-update {
+    /* Animation for real-time updates */
+    transition: all 0.5s ease;
+}
+
+/* 
+HUD Styling System: 
+This CSS file provides styles for the HUD of the game, including a health bar, timer display, minimap, score board layout, team colors, and animations for real-time updates. 
+*/
