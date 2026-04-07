@@ -1,0 +1,176 @@
+:root {
+    /* Color Variables */
+    --primary-color: #3498db; /* Bright blue */
+    --secondary-color: #2ecc71; /* Emerald green */
+    --background-color: #ecf0f1; /* Light grey */
+    --text-color: #2c3e50; /* Dark grey */
+    --accent-color: #e74c3c; /* Red */
+    
+    /* Transition Variables */
+    --transition-time: 0.3s;
+    --transition-ease: ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Game Container */
+.game-container {
+    width: 100%;
+    height: auto;
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* FPS Counter */
+.fps-counter {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}
+
+/* Menu Styling */
+.menu {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-item {
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    transition: background-color var(--transition-time) var(--transition-ease);
+}
+
+.menu-item:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Game Title */
+.game-title {
+    font-size: 2.5em;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Button Styling */
+.button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color var(--transition-time) var(--transition-ease);
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Mode Cards */
+.mode-card {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    margin: 10px;
+    transition: transform var(--transition-time) var(--transition-ease);
+}
+
+.mode-card:hover {
+    transform: scale(1.05);
+}
+
+/* HUD Positioning */
+.hud {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+/* Health Bar */
+.health-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.health-bar-fill {
+    background-color: var(--secondary-color);
+    height: 100%;
+    transition: width var(--transition-time) linear;
+}
+
+/* Minimap */
+.minimap {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px;
+}
+
+/* Score Board */
+.score-board {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #1abc9c;
+        --secondary-color: #e67e22;
+        --background-color: #34495e;
+        --text-color: #ecf0f1;
+        --accent-color: #c0392b;
+    }
+}
+
+/** 
+ * CSS3 Features, Accessibility, and Performance Documentation:
+ * The following document outlines various CSS3 features such as CSS Variables, Flexbox, Gradients, and Media Queries. CSS Variables (Custom Properties) allow developers to create reusable values that can be applied throughout stylesheets. This ensures easier maintenance and theming.
+ * 
+ * Flexbox enables responsive layouts by distributing space along a container's axis, accommodating various screen sizes and orientations. Gradients allow for smooth transitions between colors, enhancing visual styling.
+ * 
+ * Media Queries are essential for creating responsive designs, allowing style changes based on screen size, thus improving user experience across devices. Accessibility is enhanced through semantic HTML combined with CSS, ensuring content is readable and navigable by assistive technologies.
+ * 
+ * Performance considerations include using efficient selectors, minimizing CSS files, and considering critical rendering paths to improve loading speed.
+ * This document further elaborates on techniques to maintain high performance in CSS rendering.
+ * Combined, these aspects create a robust framework for modern web design, fostering an inclusive and visually appealing experience for all users.
+ */
